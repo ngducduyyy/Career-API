@@ -16,7 +16,7 @@ app.use(cors({
 
 const PORT = process.env.PORT
 const DATABASE_NAME = process.env.DATABASE_NAME
-mongoose.connect("mongodb+srv://mindx_user:kPynC5XXgZLm6bqv@cluster0.g0ql4c9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb+srv://mindx_user:kPynC5XXgZLm6bqv@cluster0.g0ql4c9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(() => console.log("DB connected"))
 
 app.listen(PORT, ()=>{
     console.log("Server is running on port " + PORT)
